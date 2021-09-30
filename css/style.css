@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     font-family: "Roboto", sans-serif;
     overflow: hidden;
@@ -27,29 +30,28 @@ li {
     align-items: center;
 }
 .slide {
-    position: relative;
     height: 80vh;
     border-radius: 30px;
     margin: 10px;
     cursor: pointer;
     color: #fff;
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     transition: all 500ms ease-in-out;
 }
-
-.title {
-/*     position: absolute;
-    bottom: 25px;
-    left:50px;
-    opacity: 0; */
-
+.slide .title {
+   font-size: 30px;
+    opacity: 0;
 }
 .slide._active{
-    flex: 11;
+    flex: 10;
 }
-.slide._active h2{
+.slide._active .title{
     opacity: 1;
+    transition: opacity 300ms ease-in 400ms;
 }
